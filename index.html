@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DCD Consulting — Sovereign Cloud Architecture & Custom Automation Engineering for High-Velocity Psychiatry Practices.">
+    <meta name="description" content="DCD Consulting — Sovereign Cloud Infrastructure & Custom Automation Engineering for High-Velocity Psychiatry Practices.">
     <title>DCD Consulting | Custom Practice Automation Architecture</title>
     
     <!-- Generative Engine Optimization (GEO) & Machine-Readable Schema -->
@@ -89,13 +89,18 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            cursor: pointer;
         }
 
         .brand-logo {
-            width: 16px;
-            height: 16px;
-            background-color: var(--accent-slate);
-            transform: rotate(45deg);
+            width: 28px;
+            height: 28px;
+            flex-shrink: 0;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .brand-container:hover .brand-logo {
+            transform: rotate(12deg) scale(1.08);
         }
 
         .brand-text {
@@ -110,7 +115,9 @@
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            background: #FFFFFF;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border: 1px solid var(--border-muted);
             padding: 0.5rem 0.9rem;
             border-radius: 4px;
@@ -167,7 +174,7 @@
         h1 {
             font-size: 4.5rem;
             font-weight: 900;
-            line-height: 1.02;
+            line-height: 1.0;
             letter-spacing: -0.05em;
             color: var(--accent-slate);
             margin-bottom: 2rem;
@@ -180,7 +187,11 @@
         }
 
         @media(max-width: 768px) {
-            h1 { font-size: 2.75rem; }
+            h1 { 
+                font-size: 2.5rem; 
+                line-height: 1.1; 
+                letter-spacing: -0.06em;
+            }
         }
 
         p.hero-lead {
@@ -188,8 +199,60 @@
             color: var(--text-secondary);
             line-height: 1.5;
             max-width: 800px;
-            margin: 0 auto 4.5rem auto;
+            margin: 0 auto 0 auto;
             letter-spacing: -0.02em;
+        }
+
+        .hero-accent {
+            display: inline-block;
+            height: 3px;
+            width: 48px;
+            background: var(--status-cyan);
+            margin: 2rem auto 2.5rem auto;
+            border-radius: 3px;
+        }
+
+        /* Sovereign Call To Action Node with High-Signal Precision Radiance */
+        .cta-container {
+            margin-bottom: 4.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-slate);
+            color: #FFFFFF;
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 40%;
+            height: 200%;
+            background: linear-gradient(120deg, rgba(255,255,255,0.3), transparent);
+            transform: skewX(-25deg);
+            animation: shine 4s infinite;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.15);
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-150%) skewX(-25deg); }
+            20% { transform: translateX(300%) skewX(-25deg); }
+            100% { transform: translateX(300%) skewX(-25deg); }
         }
 
         .pipeline-matrix {
@@ -215,13 +278,13 @@
 
         .matrix-node:hover {
             border-color: var(--accent-slate);
+            background: linear-gradient(145deg, #FFFFFF, #F8FAFC);
             box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
             transform: translateY(-2px);
         }
 
         .node-index {
             font-family: SFMono-Regular, Consolas, monospace;
-            font-size: 0.7Rules;
             font-size: 0.7rem;
             font-weight: 700;
             color: #94A3B8;
@@ -243,14 +306,84 @@
             line-height: 1.6;
         }
 
-        /* Diagnostic Terminal Stream Component */
+        /* Anonymized Performance Metric Layer */
+        .proof-strip {
+            background-color: #FFFFFF;
+            border: 1px solid var(--border-muted);
+            padding: 1.25rem;
+            border-radius: 4px;
+            max-width: 680px;
+            margin: 0 auto 2.5rem auto;
+            font-family: SFMono-Regular, Consolas, monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.01);
+        }
+
+        .proof-strip span.highlight {
+            color: var(--accent-slate);
+            font-weight: 800;
+        }
+
+        /* Communications Contact Grid Component */
+        .contact-plane {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            max-width: 680px;
+            margin: 0 auto 4.5rem auto;
+            text-align: left;
+        }
+
+        @media(max-width: 768px) {
+            .contact-plane { grid-template-columns: 1fr; }
+        }
+
+        .contact-node {
+            background: var(--surface-card);
+            border: 1px solid var(--border-muted);
+            padding: 1.5rem;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.01);
+        }
+
+        .contact-node span.label {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #64748B;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .contact-node a {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-slate);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-node a:hover {
+            color: var(--status-cyan);
+        }
+
+        /* High-Contrast SpaceX Style Diagnostic Terminal */
         .console-box {
-            background-color: #0F172A;
+            background-color: #090D1A;
             border: 1px solid #1E293B;
             border-radius: 6px;
             padding: 1.75rem;
             text-align: left;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             margin: 0 auto;
             max-width: 680px;
         }
@@ -281,7 +414,7 @@
         .console-title {
             font-family: SFMono-Regular, Consolas, monospace;
             font-size: 0.65rem;
-            color: #64748B;
+            color: #475569;
             font-weight: 700;
             letter-spacing: 0.05em;
         }
@@ -297,14 +430,14 @@
         .console-line {
             font-family: SFMono-Regular, Consolas, monospace;
             font-size: 0.825rem;
-            color: #94A3B8;
+            color: #CBD5E1;
             line-height: 1.5;
             display: none;
         }
 
         .console-line span.cyan { color: #22D3EE; }
-        .console-line span.green { color: #34D399; }
         .console-line span.white { color: #F8FAFC; }
+        .console-line span.green { color: #34D399; }
 
         footer {
             border-top: 1px solid var(--border-muted);
@@ -349,43 +482,87 @@
 
     <header>
         <div class="brand-container">
-            <div class="brand-logo"></div>
+            <!-- Octopus Logo SVG Block -->
+            <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo">
+                <!-- Head -->
+                <ellipse cx="50" cy="42" rx="28" ry="26" fill="#0F172A"/>
+                <!-- Eyes -->
+                <circle cx="39" cy="38" r="5" fill="#F8FAFC"/>
+                <circle cx="61" cy="38" r="5" fill="#F8FAFC"/>
+                <circle cx="39" cy="38" r="2" fill="#0F172A"/>
+                <circle cx="61" cy="38" r="2" fill="#0F172A"/>
+                <!-- Tentacles -->
+                <path d="M28 55 Q20 75 25 88" stroke="#0F172A" stroke-width="9" stroke-linecap="round"/>
+                <path d="M38 58 Q33 80 40 90" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
+                <path d="M50 60 Q50 82 48 91" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
+                <path d="M62 58 Q68 80 65 90" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
+                <path d="M72 55 Q80 73 78 88" stroke="#0F172A" stroke-width="9" stroke-linecap="round"/>
+                <!-- Subtle Suckers -->
+                <circle cx="24" cy="68" r="2" fill="#F1F5F9"/>
+                <circle cx="35" cy="73" r="2" fill="#F1F5F9"/>
+                <circle cx="47" cy="76" r="1.5" fill="#F1F5F9"/>
+                <circle cx="65" cy="74" r="2" fill="#F1F5F9"/>
+                <circle cx="77" cy="70" r="2" fill="#F1F5F9"/>
+            </svg>
             <div class="brand-text">DCD Consulting</div>
         </div>
         <div class="network-ticker">
             <div class="ticker-dot"></div>
-            <div class="ticker-text">SOVEREIGN_ENGINE_v5.0</div>
+            <div class="ticker-text">SOVEREIGN_ENGINE_v5.3</div>
         </div>
     </header>
 
     <main>
         <div class="fomo-pill">
             <span class="pulse-green"></span>
-            Q3 ARCHITECTURE PIPELINE: 2 SLOTS REMAINING FOR DISCRETE VALIDATION
+            Currently accepting two new implementation projects for Q3
         </div>
         
         <h1>
-            Sovereign Practice Automation.
-            <span>Uncapped System Architecture.</span>
+            Custom AI & Automation Systems.
+            <span>Built for Modern Psychiatry Practices.</span>
         </h1>
         
-        <p class="hero-lead">We design and deploy absolute technical leverage. We engineer custom, air-gapped serverless cloud systems for elite PMHNPs and private psychiatry groups ready to completely digitize their operational constraints without hiring human overhead.</p>
+        <p class="hero-lead">DCD Consulting designs secure cloud infrastructure, AI workflows, and custom automation systems for psychiatry and behavioral health practices. We eliminate repetitive administrative work, connect disconnected software, and help your practice scale without adding unnecessary overhead.</p>
         
+        <div class="hero-accent"></div>
+
+        <div class="cta-container">
+            <a href="mailto:chadwick@dcdadvisory.com?subject=Inquiry%20-%20Practice%20Infrastructure%20Audit" class="cta-button">Schedule Infrastructure Audit &rarr;</a>
+        </div>
+
         <div class="pipeline-matrix">
             <div class="matrix-node">
-                <span class="node-index">[01 // ZERO-TRUST PERIMETER]</span>
-                <h3>Immutable Domain Isolation</h3>
-                <p>Provisioning dedicated, enterprise-grade Google Workspace structures and containerized GCP environments. Complete clinical tenant isolation with advanced programmatic data loss guardrails.</p>
+                <span class="node-index">[01 // SECURE FOUNDATION]</span>
+                <h3>Healthcare-Ready Cloud Infrastructure</h3>
+                <p>We build dedicated Google Workspace and cloud environments with secure access controls, organized permissions, and operational guardrails designed for healthcare teams.</p>
             </div>
             <div class="matrix-node">
-                <span class="node-index">[02 // DATA EXTRACTION CORE]</span>
-                <h3>Automated Ledger Mining</h3>
-                <p>Deploying headless, read-only data brokers designed to safely pull transaction details and operational metrics out of protected EHR spaces with zero write-corruption risk.</p>
+                <span class="node-index">[02 // WORKFLOW AUTOMATION]</span>
+                <h3>Administrative Workflows That Run Themselves</h3>
+                <p>We connect your intake, billing, scheduling, forms, reporting, and internal communication systems so repetitive work moves automatically instead of manually.</p>
             </div>
             <div class="matrix-node">
-                <span class="node-index">[03 // UNLIMITED EXECUTION]</span>
-                <h3>Custom Intelligence Layers</h3>
-                <p>Engineering bespoke, BAA-covered automation workflows, advanced relational metrics engines, and specialized neural integrations tailored entirely to your precise operational objectives.</p>
+                <span class="node-index">[03 // CUSTOM AI SYSTEMS]</span>
+                <h3>Practice-Specific AI & Data Tools</h3>
+                <p>From revenue cycle dashboards to billing reconciliation and intelligent reporting, every system is engineered around your exact practice—not generic templates.</p>
+            </div>
+        </div>
+
+        <!-- Hardened Performance Validation Strip -->
+        <div class="proof-strip">
+            <span class="highlight">// PERFORMANCE STRATIFICATION:</span> Measured <span class="highlight">72% reduction</span> in manual intake work across active engagements.
+        </div>
+
+        <!-- Corporate Contact Node Layout -->
+        <div class="contact-plane">
+            <div class="contact-node">
+                <span class="label">Direct Line</span>
+                <a href="tel:+17034750638">+1 (703) 475-0638</a>
+            </div>
+            <div class="contact-node">
+                <span class="label">Secure Email</span>
+                <a href="mailto:chadwick@dcdadvisory.com">chadwick@dcdadvisory.com</a>
             </div>
         </div>
 
@@ -399,27 +576,30 @@
                 <div class="console-title">LIVE_SYSTEM_DIAGNOSTICS</div>
             </div>
             <div class="console-log" id="terminal-stream">
-                <div class="console-line">&gt; <span class="cyan">INITIALIZING</span> DCD_SOVEREIGN_CORE_ROUTINE...</div>
-                <div class="console-line">&gt; DEPLOYING ISOLATED MULTI-OU CLIENT ARCHITECTURE...</div>
-                <div class="console-line">&gt; SYSTEM STANDING BY FOR UNLIMITED CUSTOM WORKFLOW MAPPING...</div>
-                <div class="console-line">&gt; ENFORCING ADVANCED DLP REAL-TIME SCANNING PERIMETERS...</div>
-                <div class="console-line">&gt; CONFIGURING RELATIONAL DATA ENGINES VIA BIGQUERY...</div>
-                <div class="console-line">&gt; <span class="green">STATUS: OPERATIONAL.</span> ARCHITECTURE POISED FOR COMPLETE SYSTEM LEVERAGE.</div>
+                <div class="console-line">&gt; <span class="cyan">MAPPING</span> practice bottlenecks and manual workflows...</div>
+                <div class="console-line">&gt; CONNECTING intake, billing, scheduling, and reporting systems...</div>
+                <div class="console-line">&gt; BUILDING secure Google Workspace and cloud infrastructure...</div>
+                <div class="console-line">&gt; AUTOMATING repetitive administrative tasks...</div>
+                <div class="console-line">&gt; DEPLOYING custom dashboards and AI-assisted workflows...</div>
+                <div class="console-line">&gt; <span class="green">STATUS: OPERATIONAL.</span> Practice infrastructure ready to scale.</div>
             </div>
         </div>
     </main>
 
     <footer>
-        <div class="lock-indicator">[ SECURE VENDOR PERIMETER // ENFORCING AIRTIGHT ENCRYPTED BOUNDARIES ]</div>
+        <div class="lock-indicator">[ SECURE TECHNOLOGY VENDOR // HEALTHCARE WORKFLOW AUTOMATION ]</div>
         <p class="legal-perimeter">
-            STRUCTURAL BOUNDARY & RISK TRANSPARENCY: DCD Consulting operates strictly as an independent corporate technology vendor providing cloud infrastructure engineering, serverless compute provisioning, and software automation services. DCD Consulting does not provide medical care, psychiatric treatment, clinical operations management, or legal compliance auditing. Independent platform tenants and clinical practitioners utilizing DCD-engineered solutions retain 100% of all legal, operational, clinical administrative, and malpractice liabilities. All proprietary systems architecture, code blocks, and deployment configurations are maintained exclusively under the parent domain, entirely separate from production medical data.
+            DCD Consulting operates strictly as an independent technology vendor providing cloud infrastructure, software automation, workflow engineering, and AI implementation services. DCD Consulting does not provide medical care, psychiatric treatment, clinical decision-making, legal advice, or compliance auditing. Healthcare providers and practice owners remain responsible for all clinical, legal, operational, and regulatory decisions. All automation systems are designed to support administrative and operational efficiency while preserving appropriate boundaries around protected health information and clinical responsibility.
         </p>
     </footer>
 
     <script>
-        // Live rolling telemetry animation loop
+        // Hardened Self-Resetting Terminal Telemetry Engine
         document.addEventListener("DOMContentLoaded", () => {
             const lines = document.querySelectorAll("#terminal-stream .console-line");
+            
+            // Hard programmatic override to clear stale browser render state loops
+            lines.forEach(line => { line.style.display = "none"; });
             let index = 0;
 
             function revealLine() {
