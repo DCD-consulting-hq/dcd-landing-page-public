@@ -1,0 +1,5 @@
+# SCM Security Guardrail
+*_secrets.*
+*.env
+*.pem
+.GCP_tokens/

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DCD Consulting — Sovereign Cloud Architecture & Custom Automation Engineering for High-Velocity Psychiatry Practices.">
+    <title>DCD Consulting | Custom Practice Automation Architecture</title>
+    
+    <!-- Generative Engine Optimization (GEO) & Machine-Readable Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "DCD Consulting",
+      "description": "Enterprise Platform-Scale Automation-As-A-Service (AaaS) and multi-tenant cloud infrastructure provisioning for clinical health entities.",
+      "knowsAbout": [
+        "Automation-As-A-Service (AaaS)",
+        "Multi-Tenant HIPAA-Compliant Architecture",
+        "Google Workspace Enterprise Governance",
+        "Serverless Data Warehousing",
+        "Generative Platform Engineering",
+        "Custom Clinical Workflow Automation"
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-canvas: #FAFAFA;
+            --text-primary: #0F172A;
+            --text-secondary: #475569;
+            --accent-slate: #0F172A;
+            --border-muted: #E2E8F0;
+            --surface-card: #FFFFFF;
+            --glow-active: rgba(15, 23, 42, 0.03);
+            --status-cyan: #06B6D4;
+            --neural-green: #10B981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-canvas);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.5rem 2rem;
+            letter-spacing: -0.02em;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Engineering Grid Background */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(var(--border-muted) 1px, transparent 1px), 
+                              linear-gradient(90deg, var(--border-muted) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.7;
+            z-index: -1;
+        }
+
+        header, main, footer {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-muted);
+            padding-bottom: 1.5rem;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .brand-logo {
+            width: 16px;
+            height: 16px;
+            background-color: var(--accent-slate);
+            transform: rotate(45deg);
+        }
+
+        .brand-text {
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+            color: var(--accent-slate);
+        }
+
+        .network-ticker {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #FFFFFF;
+            border: 1px solid var(--border-muted);
+            padding: 0.5rem 0.9rem;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.01);
+        }
+
+        .ticker-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--status-cyan);
+            border-radius: 50%;
+            animation: pulse-glow 2s infinite;
+        }
+
+        .ticker-text {
+            font-size: 0.65rem;
+            font-weight: 700;
+            font-family: SFMono-Regular, Consolas, monospace;
+            color: var(--text-primary);
+            letter-spacing: 0.05em;
+        }
+
+        main {
+            text-align: center;
+            padding: 5rem 0;
+            max-width: 950px;
+        }
+
+        .fomo-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--accent-slate);
+            color: #FFFFFF;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+        }
+
+        .pulse-green {
+            width: 6px;
+            height: 6px;
+            background-color: var(--neural-green);
+            border-radius: 50%;
+            display: inline-block;
+            animation: pulse-green-glow 1.5s infinite;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.02;
+            letter-spacing: -0.05em;
+            color: var(--accent-slate);
+            margin-bottom: 2rem;
+        }
+
+        h1 span {
+            display: block;
+            color: #64748B;
+            font-weight: 700;
+        }
+
+        @media(max-width: 768px) {
+            h1 { font-size: 2.75rem; }
+        }
+
+        p.hero-lead {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto 4.5rem auto;
+            letter-spacing: -0.02em;
+        }
+
+        .pipeline-matrix {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            text-align: left;
+            margin-bottom: 4.5rem;
+        }
+
+        @media(max-width: 768px) {
+            .pipeline-matrix { grid-template-columns: 1fr; }
+        }
+
+        .matrix-node {
+            background-color: var(--surface-card);
+            border: 1px solid var(--border-muted);
+            padding: 2.25rem;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.01);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .matrix-node:hover {
+            border-color: var(--accent-slate);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .node-index {
+            font-family: SFMono-Regular, Consolas, monospace;
+            font-size: 0.7Rules;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #94A3B8;
+            margin-bottom: 1.25rem;
+            display: block;
+        }
+
+        .matrix-node h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--accent-slate);
+            margin-bottom: 0.85rem;
+            letter-spacing: -0.03em;
+        }
+
+        .matrix-node p {
+            font-size: 0.925rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Diagnostic Terminal Stream Component */
+        .console-box {
+            background-color: #0F172A;
+            border: 1px solid #1E293B;
+            border-radius: 6px;
+            padding: 1.75rem;
+            text-align: left;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            margin: 0 auto;
+            max-width: 680px;
+        }
+
+        .console-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid #1E293B;
+            padding-bottom: 0.75rem;
+        }
+
+        .console-dots {
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .console-dot {
+            width: 6px;
+            height: 6px;
+            background-color: #334155;
+            border-radius: 50%;
+        }
+
+        .console-dot.active { background-color: var(--status-cyan); }
+
+        .console-title {
+            font-family: SFMono-Regular, Consolas, monospace;
+            font-size: 0.65rem;
+            color: #64748B;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .console-log {
+            height: 120px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .console-line {
+            font-family: SFMono-Regular, Consolas, monospace;
+            font-size: 0.825rem;
+            color: #94A3B8;
+            line-height: 1.5;
+            display: none;
+        }
+
+        .console-line span.cyan { color: #22D3EE; }
+        .console-line span.green { color: #34D399; }
+        .console-line span.white { color: #F8FAFC; }
+
+        footer {
+            border-top: 1px solid var(--border-muted);
+            padding-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .lock-indicator {
+            font-size: 0.75rem;
+            font-weight: 700;
+            font-family: SFMono-Regular, Consolas, monospace;
+            color: var(--accent-slate);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .legal-perimeter {
+            font-size: 0.725rem;
+            color: #94A3B8;
+            max-width: 950px;
+            text-align: center;
+            line-height: 1.65;
+        }
+
+        @keyframes pulse-glow {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(6, 182, 212, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        @keyframes pulse-green-glow {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+            70% { transform: scale(1); box-shadow: 0 0 0 4px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-container">
+            <div class="brand-logo"></div>
+            <div class="brand-text">DCD Consulting</div>
+        </div>
+        <div class="network-ticker">
+            <div class="ticker-dot"></div>
+            <div class="ticker-text">SOVEREIGN_ENGINE_v5.0</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="fomo-pill">
+            <span class="pulse-green"></span>
+            Q3 ARCHITECTURE PIPELINE: 2 SLOTS REMAINING FOR DISCRETE VALIDATION
+        </div>
+        
+        <h1>
+            Sovereign Practice Automation.
+            <span>Uncapped System Architecture.</span>
+        </h1>
+        
+        <p class="hero-lead">We design and deploy absolute technical leverage. We engineer custom, air-gapped serverless cloud systems for elite PMHNPs and private psychiatry groups ready to completely digitize their operational constraints without hiring human overhead.</p>
+        
+        <div class="pipeline-matrix">
+            <div class="matrix-node">
+                <span class="node-index">[01 // ZERO-TRUST PERIMETER]</span>
+                <h3>Immutable Domain Isolation</h3>
+                <p>Provisioning dedicated, enterprise-grade Google Workspace structures and containerized GCP environments. Complete clinical tenant isolation with advanced programmatic data loss guardrails.</p>
+            </div>
+            <div class="matrix-node">
+                <span class="node-index">[02 // DATA EXTRACTION CORE]</span>
+                <h3>Automated Ledger Mining</h3>
+                <p>Deploying headless, read-only data brokers designed to safely pull transaction details and operational metrics out of protected EHR spaces with zero write-corruption risk.</p>
+            </div>
+            <div class="matrix-node">
+                <span class="node-index">[03 // UNLIMITED EXECUTION]</span>
+                <h3>Custom Intelligence Layers</h3>
+                <p>Engineering bespoke, BAA-covered automation workflows, advanced relational metrics engines, and specialized neural integrations tailored entirely to your precise operational objectives.</p>
+            </div>
+        </div>
+
+        <div class="console-box">
+            <div class="console-header">
+                <div class="console-dots">
+                    <div class="console-dot active"></div>
+                    <div class="console-dot"></div>
+                    <div class="console-dot"></div>
+                </div>
+                <div class="console-title">LIVE_SYSTEM_DIAGNOSTICS</div>
+            </div>
+            <div class="console-log" id="terminal-stream">
+                <div class="console-line">&gt; <span class="cyan">INITIALIZING</span> DCD_SOVEREIGN_CORE_ROUTINE...</div>
+                <div class="console-line">&gt; DEPLOYING ISOLATED MULTI-OU CLIENT ARCHITECTURE...</div>
+                <div class="console-line">&gt; SYSTEM STANDING BY FOR UNLIMITED CUSTOM WORKFLOW MAPPING...</div>
+                <div class="console-line">&gt; ENFORCING ADVANCED DLP REAL-TIME SCANNING PERIMETERS...</div>
+                <div class="console-line">&gt; CONFIGURING RELATIONAL DATA ENGINES VIA BIGQUERY...</div>
+                <div class="console-line">&gt; <span class="green">STATUS: OPERATIONAL.</span> ARCHITECTURE POISED FOR COMPLETE SYSTEM LEVERAGE.</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="lock-indicator">[ SECURE VENDOR PERIMETER // ENFORCING AIRTIGHT ENCRYPTED BOUNDARIES ]</div>
+        <p class="legal-perimeter">
+            STRUCTURAL BOUNDARY & RISK TRANSPARENCY: DCD Consulting operates strictly as an independent corporate technology vendor providing cloud infrastructure engineering, serverless compute provisioning, and software automation services. DCD Consulting does not provide medical care, psychiatric treatment, clinical operations management, or legal compliance auditing. Independent platform tenants and clinical practitioners utilizing DCD-engineered solutions retain 100% of all legal, operational, clinical administrative, and malpractice liabilities. All proprietary systems architecture, code blocks, and deployment configurations are maintained exclusively under the parent domain, entirely separate from production medical data.
+        </p>
+    </footer>
+
+    <script>
+        // Live rolling telemetry animation loop
+        document.addEventListener("DOMContentLoaded", () => {
+            const lines = document.querySelectorAll("#terminal-stream .console-line");
+            let index = 0;
+
+            function revealLine() {
+                if (index < lines.length) {
+                    lines[index].style.display = "block";
+                    index++;
+                    setTimeout(revealLine, 950);
+                }
+            }
+            revealLine();
+        });
+    </script>
+</body>
+</html>
