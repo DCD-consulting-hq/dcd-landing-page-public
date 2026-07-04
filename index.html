@@ -6,7 +6,6 @@
     <meta name="description" content="DCD Consulting — Sovereign Cloud Infrastructure & Custom Automation Engineering for High-Velocity Psychiatry Practices.">
     <title>DCD Consulting | Custom Practice Automation Architecture</title>
     
-    <!-- Generative Engine Optimization (GEO) & Machine-Readable Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -111,6 +110,26 @@
             color: var(--accent-slate);
         }
 
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-link-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link-btn:hover {
+            color: var(--accent-slate);
+        }
+
         .network-ticker {
             display: flex;
             align-items: center;
@@ -192,6 +211,12 @@
                 line-height: 1.1; 
                 letter-spacing: -0.06em;
             }
+            .nav-links {
+                gap: 0.75rem;
+            }
+            .network-ticker {
+                display: none;
+            }
         }
 
         p.hero-lead {
@@ -199,7 +224,7 @@
             color: var(--text-secondary);
             line-height: 1.5;
             max-width: 800px;
-            margin: 0 auto 0 auto;
+            margin: 0 auto;
             letter-spacing: -0.02em;
         }
 
@@ -212,7 +237,7 @@
             border-radius: 3px;
         }
 
-        /* Sovereign Call To Action Node with High-Signal Precision Radiance */
+        /* Sovereign Call To Action Node */
         .cta-container {
             margin-bottom: 4.5rem;
         }
@@ -230,6 +255,9 @@
             position: relative;
             overflow: hidden;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
 
         .cta-button::after {
@@ -439,6 +467,181 @@
         .console-line span.white { color: #F8FAFC; }
         .console-line span.green { color: #34D399; }
 
+        /* Glassmorphic About Me Modal Overlay Structure */
+        .about-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .about-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Upgraded Split-Layout About Card */
+        .about-card {
+            background: #FFFFFF;
+            border: 1px solid var(--border-muted);
+            padding: 3rem;
+            border-radius: 6px;
+            max-width: 760px;
+            width: 92%;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            gap: 2.5rem;
+            align-items: flex-start;
+            text-align: left;
+            transform: translateY(20px);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .about-modal.active .about-card {
+            transform: translateY(0);
+        }
+
+        /* Clean Profile Picture Mask */
+        .about-avatar-frame {
+            width: 180px;
+            height: 180px;
+            flex-shrink: 0;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--border-muted);
+            background-color: var(--bg-canvas);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .about-avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-content {
+            flex-grow: 1;
+        }
+
+        @media(max-width: 640px) {
+            .about-card {
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+            }
+            .about-avatar-frame {
+                width: 120px;
+                height: 120px;
+                margin: 0 auto;
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1.5rem; right: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.25rem;
+            cursor: pointer;
+            font-family: monospace;
+            font-weight: 700;
+        }
+
+        .close-btn:hover {
+            color: var(--accent-slate);
+        }
+
+        .about-card h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-slate);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.03em;
+        }
+
+        .about-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* NEW GLASSMORPHIC INTERACTIVE PORTAL MODAL STYLE SHEETS */
+        .portal-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 101;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .portal-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .portal-card {
+            background: #090D1A; 
+            border: 1px solid #1E293B;
+            border-radius: 8px;
+            width: 95%;
+            max-width: 1200px;
+            height: 90%;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transform: translateY(20px);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .portal-modal.active .portal-card {
+            transform: translateY(0);
+        }
+
+        .portal-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #090D1A;
+        }
+
+        .portal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #1E293B;
+            background: #090D1A;
+        }
+
+        @media(max-width: 768px) {
+            .portal-card {
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+                border: none;
+            }
+        }
+
         footer {
             border-top: 1px solid var(--border-muted);
             padding-top: 2.5rem;
@@ -481,23 +684,18 @@
 <body>
 
     <header>
-        <div class="brand-container">
-            <!-- Octopus Logo SVG Block -->
+        <div class="brand-container" id="brand-home">
             <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo">
-                <!-- Head -->
                 <ellipse cx="50" cy="42" rx="28" ry="26" fill="#0F172A"/>
-                <!-- Eyes -->
                 <circle cx="39" cy="38" r="5" fill="#F8FAFC"/>
                 <circle cx="61" cy="38" r="5" fill="#F8FAFC"/>
                 <circle cx="39" cy="38" r="2" fill="#0F172A"/>
                 <circle cx="61" cy="38" r="2" fill="#0F172A"/>
-                <!-- Tentacles -->
                 <path d="M28 55 Q20 75 25 88" stroke="#0F172A" stroke-width="9" stroke-linecap="round"/>
                 <path d="M38 58 Q33 80 40 90" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
                 <path d="M50 60 Q50 82 48 91" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
                 <path d="M62 58 Q68 80 65 90" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
                 <path d="M72 55 Q80 73 78 88" stroke="#0F172A" stroke-width="9" stroke-linecap="round"/>
-                <!-- Subtle Suckers -->
                 <circle cx="24" cy="68" r="2" fill="#F1F5F9"/>
                 <circle cx="35" cy="73" r="2" fill="#F1F5F9"/>
                 <circle cx="47" cy="76" r="1.5" fill="#F1F5F9"/>
@@ -506,9 +704,12 @@
             </svg>
             <div class="brand-text">DCD Consulting</div>
         </div>
-        <div class="network-ticker">
-            <div class="ticker-dot"></div>
-            <div class="ticker-text">SOVEREIGN_ENGINE_v5.3</div>
+        <div class="nav-links">
+            <button class="nav-link-btn" id="open-about">About Me</button>
+            <div class="network-ticker">
+                <div class="ticker-dot"></div>
+                <div class="ticker-text">SOVEREIGN_ENGINE_v5.5</div>
+            </div>
         </div>
     </header>
 
@@ -528,7 +729,7 @@
         <div class="hero-accent"></div>
 
         <div class="cta-container">
-            <a href="mailto:chadwick@dcdadvisory.com?subject=Inquiry%20-%20Practice%20Infrastructure%20Audit" class="cta-button">Schedule Infrastructure Audit &rarr;</a>
+            <button id="open-portal" class="cta-button">Schedule Infrastructure Audit &rarr;</button>
         </div>
 
         <div class="pipeline-matrix">
@@ -549,12 +750,10 @@
             </div>
         </div>
 
-        <!-- Hardened Performance Validation Strip -->
         <div class="proof-strip">
             <span class="highlight">// PERFORMANCE STRATIFICATION:</span> Measured <span class="highlight">72% reduction</span> in manual intake work across active engagements.
         </div>
 
-        <!-- Corporate Contact Node Layout -->
         <div class="contact-plane">
             <div class="contact-node">
                 <span class="label">Direct Line</span>
@@ -586,6 +785,47 @@
         </div>
     </main>
 
+    <!-- ABOUT ME SLIDE MODAL -->
+    <div class="about-modal" id="about-overlay">
+        <div class="about-card">
+            <button class="close-btn" id="close-about">✕</button>
+            
+            <div class="about-avatar-frame">
+                <img src="data:image/jpeg;base64,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" class="about-avatar" id="about-photo">
+            </div>
+
+            <div class="about-content">
+                <h2>About Chadwick</h2>
+                <p>
+                    I’m a former military professional turned cloud automation engineer. After serving, I channeled my experience building secure, high-reliability systems into helping behavioral health practices operate at their best. 
+                </p>
+                <p>
+                    My wife owns <strong>Mindsett Mental Health</strong>, so I’ve seen firsthand the daily challenges modern psychiatry and behavioral health practices face — from fragmented tools and administrative overload to the constant pressure of scaling while maintaining clinical excellence.
+                </p>
+                <p>
+                    That’s why I design and engineer custom, zero-trust cloud automation systems tailored specifically to each practice’s workflows. I map your clinical processes, eliminate repetitive manual work, and build dedicated infrastructure from the ground up — so you can reduce overhead, remove frustration, and focus on delivering outstanding patient care.
+                </p>
+                <p>
+                    As a husband and father, I’m personally driven to create systems that bring order, stability, and real operational leverage — the kind I’ve helped build for my own family’s practice.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW INTERACTIVE SYSTEMS PORTAL MODAL -->
+    <div class="portal-modal" id="portal-overlay">
+        <div class="portal-card">
+            <div class="portal-header">
+                <div class="brand-container">
+                    <div class="brand-text" style="color: #F8FAFC; font-size: 1rem;">DCD CONFIGURATOR PORTAL</div>
+                </div>
+                <button class="close-btn" id="close-portal" style="position: static; color: #64748B; font-size: 1.25rem;">✕</button>
+            </div>
+            <!-- Interactive frame target loader -->
+            <iframe class="portal-iframe" id="portal-frame" src="about:blank" title="DCD Systems Configurator"></iframe>
+        </div>
+    </div>
+
     <footer>
         <div class="lock-indicator">[ SECURE TECHNOLOGY VENDOR // HEALTHCARE WORKFLOW AUTOMATION ]</div>
         <p class="legal-perimeter">
@@ -594,11 +834,12 @@
     </footer>
 
     <script>
-        // Hardened Self-Resetting Terminal Telemetry Engine
+        // Programmatic Deployment URL Target - REPLACE WITH YOUR LIVE GOOGLE APPS SCRIPT WEB APP URL
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzMfGEJkJIlbzKuTJhGmYX2OG5FTXkpLpQaAObOTXuG6lo5dSJPQH0XWScZCI3m-AQB3g/exec";
+
         document.addEventListener("DOMContentLoaded", () => {
+            // Hardened Self-Resetting Terminal Telemetry Engine
             const lines = document.querySelectorAll("#terminal-stream .console-line");
-            
-            // Hard programmatic override to clear stale browser render state loops
             lines.forEach(line => { line.style.display = "none"; });
             let index = 0;
 
@@ -610,6 +851,49 @@
                 }
             }
             revealLine();
+
+            // About Overlay Link Triggers
+            const openAboutBtn = document.getElementById("open-about");
+            const closeAboutBtn = document.getElementById("close-about");
+            const aboutOverlay = document.getElementById("about-overlay");
+
+            openAboutBtn.addEventListener("click", () => {
+                aboutOverlay.classList.add("active");
+            });
+
+            closeAboutBtn.addEventListener("click", () => {
+                aboutOverlay.classList.remove("active");
+            });
+
+            aboutOverlay.addEventListener("click", (e) => {
+                if (e.target === aboutOverlay) {
+                    aboutOverlay.classList.remove("active");
+                }
+            });
+
+            // Interactive Systems Configurator Portal Triggers
+            const openPortalBtn = document.getElementById("open-portal");
+            const closePortalBtn = document.getElementById("close-portal");
+            const portalOverlay = document.getElementById("portal-overlay");
+            const portalFrame = document.getElementById("portal-frame");
+
+            openPortalBtn.addEventListener("click", () => {
+                // Programmatically set iframe src only when requested (Lazy-Loading Baseline)
+                if (portalFrame.src === "about:blank" || portalFrame.src === "") {
+                    portalFrame.src = WEB_APP_URL;
+                }
+                portalOverlay.classList.add("active");
+            });
+
+            closePortalBtn.addEventListener("click", () => {
+                portalOverlay.classList.remove("active");
+            });
+
+            portalOverlay.addEventListener("click", (e) => {
+                if (e.target === portalOverlay) {
+                    portalOverlay.classList.remove("active");
+                }
+            });
         });
     </script>
 </body>
